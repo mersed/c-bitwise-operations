@@ -1,0 +1,1 @@
+void dec_to_binary(int, char*);
