@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "functions.h"
 
-#define BYTE 8
-
 int main(int argc, char **argv) {
 	const int int_bit_length = sizeof(int) * BYTE;
 	const int str_length = int_bit_length+1;

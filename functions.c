@@ -5,9 +5,11 @@
  * which are going to be stored in string (array of chars).
  */
 void dec_to_binary(int n, char *binary_number) {
-	int i;
-	for(i=0; i<32; i++) {
-		binary_number[i] = n & 0x80000000 ? '1':'0';
+	unsigned int i;
+	int mask = 1 << (sizeof(int) * BYTE) - 1;
+
+	for(i=0; i<(sizeof(int) * BYTE); i++) {
+		binary_number[i] = n & mask ? '1':'0';
 		n = n << 1;
 	}
 
